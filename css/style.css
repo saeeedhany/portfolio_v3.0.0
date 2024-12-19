@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Noto+Sans+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+:before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'fira code', sans-serif;
+}
+
+:root {
+    --primary-color: #262626;
+    --secondary-color: #339AF0; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #fff
+}
+
+hr {
+    border: 1px solid var(--secondary-color);
+}
+
+.container-fluid {
+    width: 85%;
+    margin: auto;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.container-sec {
+    width: 86%;
+    margin: auto;
+}
+
+nav {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav .nav-content .logo p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav .nav-content ul {
+    display: flex;
+    list-style: none;
+    /* padding-top: 10px; */
+}
+
+nav .nav-content .fa6-solid--bars-staggered {
+    padding-top: 3px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .nav-content ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+    padding-bottom: 3px;
+    font-size: 17px;
+    position: relative;
+}
+
+nav .nav-content ul li a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width .2s;
+    bottom: 0;
+    left: 0;
+}
+
+nav .nav-content ul li a:hover:after {
+    width: 100%;
+}
+
+nav .nav-content ul li a span {
+    color: var(--secondary-color);
+}
+
+header {
+    background-image: url('../assets/images/hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    padding-top: 200px;
+    max-width: 100%;
+}
+
+header .header-content .para-title {
+    font-size: 37px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    max-width: 700px;
+}
+
+header .header-content .para-content p {
+    line-height: 1.4;
+    max-width: 700px;
+}
+
+header .header-content .para-title span {
+    color: var(--secondary-color);
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all .2s ease;
+}
+
+header a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px 25px;
+}
+
+.links {
+  position: fixed;
+  bottom: -20%; /* Vertically center */
+  left: 0; /* Align to the left edge */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 0; /* Add spacing between links */
+  z-index: 100; /* Ensure it stays on top of other content */
+}
+
+.links .links-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    float: left;   
+    margin-left: 30px;
+}
+
+.links .links-content a{
+    padding-bottom: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.links .links-content a:hover {
+    transform: translateX(10px);
+}
+
+.line {
+    width: 2px;
+    height: 100px;
+    background-color: var(--secondary-color);
+}
+
+.bottom-links {
+    display: none;
+}
+
+.about {
+    margin-top: 70px;
+}
+
+.about .about-content .about-title p {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.about .about-content p span{
+    color: var(--secondary-color);
+}
+
+.about .about-content .about-title p:after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 3px;
+    background: var(--secondary-color);
+    left: 220px;
+    bottom: 15px;
+}
+
+.about .about-content .about-detail p {
+    line-height: 1.3;
+    max-width: 700px;
+}
+
+.about .about-content .about-detail p:first-child{
+    margin-bottom: 20px;
+}
+
+.semi-square {
+    position: absolute; /* Ensures it stays in the same position on the screen */
+  right: 0vh; /* Distance from the right edge */
+  top: 100%; /* Vertical placement */
+  transform: translateY(-50%); /* Vertically centers the element */
+  width: 100px; /* Width of the square */
+  height: 100px; /* Height of the square */
+  border: 2px solid var(--secondary-color); /* Outline color matching the screenshot */
+  border-left: none; /* Removes the left border to create the semi-square effect */
+  border-bottom: none; /* Removes the bottom border */
+  z-index: 10; /* Makes sure it's above other elements */
+}
+
+header .about {
+    position: relative;
+}
+
+header .about .about-detail p:nth-child(2){
+    margin-bottom: 20px;
+}
+
+header .about .about-image {
+    position: absolute;
+    right: 100px;
+    top: 0;
+}
+
+header .about .about-image img {
+    width: 300px;
+}
+
+.line {
+    width: 2px;
+    height: 100px;
+    background-color: var(--secondary-color);
+}
+
+header .about .skills-section {
+    margin-top: 20px;
+}
+
+header .about .skills-section p {
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+header .about .skills-section .skills {
+    margin-left: 40px;
+}
+
+
+header .about .skills-section .skills .skills-items{
+    display: flex;
+    gap: 10px;
+}
+
+header .about .skills-section .skills .skill-title{
+    margin-top: 10px;
+}
+
+header .about .skills-section .skills .skill-title p{
+    font-size: 18px;
+}
+
+header .about .skills-section .skills .skill-item {
+
+}
+
+header .top-image {
+    display: none;
+}
+
+.projects {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.projects .projects-content .projects-title p {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.projects .projects-content p span{
+    color: var(--secondary-color);
+}
+
+.projects-btn {
+    text-align: center;
+}
+
+.projects-btn a {
+}
+
+.projects .projects-content .projects-title p:after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 3px;
+    background: var(--secondary-color);
+    left: 220px;
+    bottom: 15px;
+}
+
+.projects .projects-content .projects-detail p {
+    line-height: 1.3;
+}
+
+.projects .projects-content .projects-detail {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    align-items: center;
+}
+
+.projects .projects-content .projects-detail .projects-box {
+    width: 300px;
+    padding: 0px;
+    border: 2px solid var(--secondary-color);
+}
+
+.projects .projects-detail .projects-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.projects .projects-content .projects-detail .projects-box .tools {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.projects .projects-content .projects-detail .projects-info {
+    padding: 10px;
+}
+
+.contact{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.contact .contact-content .contact-title p {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content p span{
+    color: var(--secondary-color);
+}
+
+.contact .contact-content .contact-title p:after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 3px;
+    background: var(--secondary-color);
+    left: 200px;
+    bottom: 15px;
+}
+
+.contact .contact-content .contact-detail .contact-info .contact-text p  {
+    margin-left: 20px;    
+    line-height: 1.3;
+}
+
+.contact .contact-content .contact-detail .contact-link {
+    text-align: center;
+}
+
+.mail .footer a {
+    border: none;
+    text-decoration: underline;
+    font-weight: regular;
+    color: var(--secondary-color);
+    margin-left: -20px;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+.mail .footer a:hover {
+    background-color: transparent;
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    text-align: center;
+}
