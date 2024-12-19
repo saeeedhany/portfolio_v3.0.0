@@ -46,7 +46,7 @@ nav {
     background-color: var(--primary-color);
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 11;
 }
 
 nav .nav-content .logo p {
@@ -242,12 +242,15 @@ header .about .about-detail p:nth-child(2){
 
 header .about .about-image {
     position: absolute;
-    right: 100px;
+    right: 130px;
     top: 0;
 }
 
 header .about .about-image img {
     width: 300px;
+    border-radius: 5px;
+    outline: 2px solid var(--secondary-color);
+
 }
 
 .line {
@@ -330,9 +333,15 @@ header .top-image {
 }
 
 .projects .projects-content .projects-detail {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
-    align-items: center;
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, minmax(300px, 1fr)); */
+    /* align-items: center; */
+    /* gap: 15px */
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .projects .projects-content .projects-detail .projects-box {
