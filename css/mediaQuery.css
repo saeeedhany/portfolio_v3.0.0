@@ -44,6 +44,9 @@
     .bottom-links .bottom-links-content a:hover {
         transform: translateX(0);
     }
+    .about .about-content .about-title p:after {
+        display: none;
+    }
 }
 @media only screen and (max-width: 700px){
 	/*Big smartphones [426px -> 600px]*/
