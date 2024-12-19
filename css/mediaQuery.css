@@ -44,6 +44,7 @@
     .bottom-links .bottom-links-content a:hover {
         transform: translateX(0);
     }
+
     .about .about-content .about-title p:after {
         display: none;
     }
