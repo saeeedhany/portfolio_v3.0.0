@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Noto+Sans+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+:before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'fira code', sans-serif;
+}
+
+:root {
+    --primary-color: #262626;
+    --secondary-color: #339AF0; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #fff
+}
+
+hr {
+    border: 1px solid var(--secondary-color);
+}
+
+.container-fluid {
+    width: 85%;
+    margin: auto;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.container-sec {
+    width: 86%;
+    margin: auto;
+}
+
+nav {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+
+nav .nav-content .logo p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav .nav-content ul {
+    display: flex;
+    list-style: none;
+    /* padding-top: 10px; */
+}
+
+nav .nav-content .fa6-solid--bars-staggered {
+    padding-top: 3px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .nav-content ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+    padding-bottom: 3px;
+    font-size: 17px;
+    position: relative;
+}
+
+nav .nav-content ul li a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width .2s;
+    bottom: 0;
+    left: 0;
+}
+
+nav .nav-content ul li a:hover:after {
+    width: 100%;
+}
+
+nav .nav-content ul li a span {
+    color: var(--secondary-color);
+}
