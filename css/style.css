@@ -147,7 +147,7 @@ header a:hover {
 
 .links {
   position: fixed;
-  bottom: -20%; /* Vertically center */
+  bottom: -25%; /* Vertically center */
   left: 0; /* Align to the left edge */
   transform: translateY(-50%);
   display: flex;
